@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="dashboard.component.css">
+
+<h3>Services</h3>
+<div class="grid grid-pad">
+	<div *ng-for="#service of services | slice:0:5" class="col-1–5" (click)="onSelect(service)" [class.selected]="service === selectedService">
+		<div class="module service {{service.name}}">
+			<h4>{{service.name}}</h4>
+		</div>
+	</div>
+	<div class="service-detail">
+		<h4>{{selectedService.name}}</h4>
+		<p>
+			{{selectedService.description}}
+		</p>
+	</div>	
+</div>
+	
+	
+   
+   
+
+
